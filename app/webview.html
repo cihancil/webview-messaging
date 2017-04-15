@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <input id="text_input" />
+  <button type="button">Send</button>
+  <p>Message from Native: </p>
+</body>
+<script>
+  var messagesReceivedFromReactNative = 0;
+  document.addEventListener('message', function (e) {
+    document.getElementsByTagName('p')[0].innerHTML = "Message from Native: " + e.data;
+  });
+  document.getElementsByTagName('button')[0].addEventListener('click', function () {
+    var text = document.getElementById('text_input').value;
+    document.getElementById('text_input').value = "";
+    window.postMessage(text);
+  });
+
+</script>
+
+</html>
