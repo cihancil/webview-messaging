@@ -1,0 +1,1 @@
+![](https://github.com/cihancil/webview-messaging/blob/master/webview_messaging.gif)
